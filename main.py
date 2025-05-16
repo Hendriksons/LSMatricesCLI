@@ -1,4 +1,3 @@
-import math
 import random
 
 class Main:
@@ -7,7 +6,7 @@ class Main:
         variableList = []
         resultOfRow: int = 0
         for i in range(amountOfVars):
-            variableList.append((-1)**(round(random.random()+1) * random.random() * (10 ** (amountOfDigits))))
+            variableList.append(((-1)**(round(random.random()+1)) * random.random() * (10 ** (amountOfDigits))).__floor__())
         if listofXvars is not None:
             for i in range(len(variableList)):
                 resultOfRow += variableList[i] * listofXvars[i]
